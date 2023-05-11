@@ -2,7 +2,7 @@
 
 
 ## Description
-
+Social Network API is an API that utilizes MongoDB to allow users to share their thoughts, react to friends' thoughts, and create a friend list. 
 
 
 ## Table of Contents
@@ -13,9 +13,13 @@
 - [Questions](#questions)
 
 ## Installation
-N/A
+In order to use this api, you'll ned to install MongoDB and express. 
 
 ## Usage
+In order to start the application, you'll need to type "npm i" to install all the dependencies (type this in your terminal). Then you'll type in your terminal "node index.js" to start up the api. Since there is no front end, you'll have to use Insomia or Postman to view the different types of requests. 
+
+
+## Walkthrough Video 
 
 
 ## Screenshot
@@ -44,6 +48,6 @@ This repo uses the MIT License.
 ## Questions
 If you have any questions or concerns you can email me at: sammie.bahn@gmail.com
 
-My github can be accessed at: https://github.com/samanthaahn/tech-blog
+My github can be accessed at: https://github.com/samanthaahn/social-network-api
 
 My github username is: samanthaahn
