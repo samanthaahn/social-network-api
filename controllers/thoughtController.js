@@ -63,7 +63,8 @@ modeule.exports = {
       !thought
         ? res.status(404).json({ message: "Sorry, no thought with that ID!" })
         : res.json(thought)
-    );
+    )
+    .catch((error) => res.status(500).json(error));
   },
   // Delete a reaction
   deleteReaction(req, res) {
@@ -75,6 +76,7 @@ modeule.exports = {
       !thought
         ? res.status(404).json({ message: "Sorry, no thought with that ID!" })
         : res.json(thought)
-    );
+    )
+    .catch((error) => res.status(500).json(error));
   },
 };
