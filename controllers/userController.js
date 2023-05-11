@@ -28,17 +28,20 @@ User.findOneAndUpdate(
 )
     .then((user) => 
     !user
-    ?res.status(404).json({message: 'Sorry, no user with that ID!'})
+    ? res.status(404).json({message: 'Sorry, no user with that ID!'})
     :res.json(user)
     )
     .catch((error) => res.status(500).json(error))
 },
 // Delete a user
 deleteUser(req, res) {
-
-    .then
+User.findOneAndUpdate({_id: req.params.userId})
+    .then((user) => 
+    !user
+    ? res.status(404).json({message: 'Sorry, no user with that ID!'})
+    : Thought.deleteMany({ _id: { $in: user.thought}})
     .catch((error) => res.status(500).json(error))
-
+    )
 },
 // Add a friend
 addFriend(req, res) {
