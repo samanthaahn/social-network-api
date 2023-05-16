@@ -3,13 +3,13 @@ const { User, Thought } = require("../models");
 module.exports = {
   // Get all users
   getUsers(req, res) {
-    User.find()
+    User.find().populate("thoughts")
       .then((users) => res.json(users))
       .catch((error) => res.status(500).json(error));
   },
   // Get a single user
   getSingleUser(req, res) {
-    User.findById(req.params.userId)
+    User.findById(req.params.userId).populate("thoughts")
       .then((users) => res.status(200).json(users))
       .catch((error) => res.status(500).json(error));
   },

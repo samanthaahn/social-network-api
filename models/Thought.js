@@ -1,32 +1,5 @@
 const mongoose = require("mongoose");
 
-const thoughtSchema = new mongoose.Schema(
-  {
-    thoughtText: {
-      type: String,
-      required: true,
-      minLength: 1,
-      maxLength: 280,
-    },
-    createdAt: {
-      type: Date,
-      defualt: Date.now,
-      get: (date) => date.toLocaleDateString(),
-    },
-    username: {
-      type: String,
-      required: true,
-    },
-    reactions: [reactionSchema],
-  },
-  {
-    toJSON: {
-      virtuals: true,
-      getters: true,
-    },
-  }
-);
-
 const reactionSchema = new mongoose.Schema({
     reactionId: {
       type: mongoose.Schema.Types.ObjectId,
@@ -54,6 +27,35 @@ const reactionSchema = new mongoose.Schema({
     _id: false,
   }
   );
+
+const thoughtSchema = new mongoose.Schema(
+  {
+    thoughtText: {
+      type: String,
+      required: true,
+      minLength: 1,
+      maxLength: 280,
+    },
+    createdAt: {
+      type: Date,
+      default: Date.now,
+      get: (date) => date.toLocaleString("en-US"),
+    },
+    username: {
+      type: String,
+      required: true,
+    },
+    reactions: [reactionSchema],
+  },
+  {
+    toJSON: {
+      virtuals: true,
+      getters: true,
+    },
+  }
+);
+
+
 
 
 

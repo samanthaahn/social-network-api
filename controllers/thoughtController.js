@@ -3,9 +3,14 @@ const { Thought, User } = require("../models");
 module.exports = {
   // Get all thoughts
   getThoughts(req, res) {
+    console.log('Getting thoughts')
     Thought.find()
       .then((thoughts) => res.status(200).json(thoughts))
-      .catch((error) => res.status(500).json(error));
+      .catch((error) => {
+        console.log(error)
+        res.status(500).json(error);
+      }
+      )
   },
   // Gets a single thought by ID
   getSingleThought(req, res) {
@@ -24,7 +29,7 @@ module.exports = {
         );
       })
       .then((thoughts) => res.status(200).json(thoughts))
-      .catch((error) => res.status(500).json(error(error)));
+      .catch((error) => res.status(500).json((error)));
   },
   // Update a thought
   updateThought(req, res) {
