@@ -35,7 +35,7 @@ module.exports = {
   },
   // Delete a user
   deleteUser(req, res) {
-    User.findOneAndUpdate({ _id: req.params.userId }).then((user) =>
+    User.findOneAndDelete({ _id: req.params.userId }).then((user) =>
       !user
         ? res.status(404).json({ message: "Sorry, no user with that ID!" })
         : Thought.deleteMany({ _id: { $in: user.thought } }).then(() =>
