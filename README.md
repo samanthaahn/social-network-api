@@ -23,17 +23,15 @@ In order to start the application, you'll need to type "npm i" to install all th
 
 
 ## Screenshot
-![alt text](./public/images/Screenshot%202023-05-09%20at%208.59.48%20PM.png)
+![alt text](./assets/images/Screenshot%202023-05-19%20at%204.55.48%20PM.png)
 
-![alt text](./public/images/Screenshot%202023-05-09%20at%208.59.56%20PM.png)
+![alt text](./assets/images/Screenshot%202023-05-19%20at%204.55.56%20PM.png)
 
-![alt text](./public/images/Screenshot%202023-05-09%20at%209.00.05%20PM.png)
+![alt text](./assets/images/Screenshot%202023-05-19%20at%204.56.06%20PM.png)
 
-![alt text](./public/images/Screenshot%202023-05-09%20at%209.00.17%20PM.png)
+![alt text](./assets/images/Screenshot%202023-05-19%20at%204.56.56%20PM.png)
 
-![alt text](./public/images/Screenshot%202023-05-09%20at%209.00.24%20PM.png)
-
-![alt text](./public/images/Screenshot%202023-05-09%20at%209.00.36%20PM.png)
+![alt text](./assets/images/Screenshot%202023-05-19%20at%204.57.04%20PM.png)
 
 
 ## Contributing
