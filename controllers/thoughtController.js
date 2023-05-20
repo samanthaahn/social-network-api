@@ -73,9 +73,9 @@ module.exports = {
   },
   // Delete a reaction
   deleteReaction(req, res) {
-    Thought.findOneAndDelete(
+    Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
-      { $pull: { reactions: req.params.reactionId } },
+      { $pull: { reactions: { reactionId: req.body.reactionId } } },
       { runValidators: true, new: true }
     ).then((thought) =>
       !thought

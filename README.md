@@ -20,6 +20,7 @@ In order to start the application, you'll need to type "npm i" to install all th
 
 
 ## Walkthrough Video 
+https://drive.google.com/file/d/17M8Zbsv9OxqDTg7LfVT3E60P3Tpv4Caw/view
 
 
 ## Screenshot
